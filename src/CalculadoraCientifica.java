@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+/*To Do: 
+- Logaritmos e funções exponenciais
+- Funções matemáticas avançadas (fatorial, módulo, etc.)
+- Suporte para cálculos com números complexos
+*/
+
 //Classe Calculadora para definir métodos
 class Operacoes {
     public double somar(double a, double b) { // Somar dois números
