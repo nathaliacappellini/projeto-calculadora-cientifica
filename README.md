@@ -4,8 +4,6 @@ Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalid
 
 ## Índice
 
-## Índice
-
 1. [Funcionalidades](#funcionalidades)
 2. [Funcionalidades Futuras (To Do)](#funcionalidades-futuras-to-do)
 3. [Pré-requisitos](#pré-requisitos)
