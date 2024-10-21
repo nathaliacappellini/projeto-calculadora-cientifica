@@ -25,7 +25,7 @@ Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalid
 ## Funcionalidades Futuras (To Do)
 
 - Logaritmos e funções exponenciais
-- Funções matemáticas avançadas (fatorial, módulo, etc.)
+- Fatorial, módulo, etc.
 - Suporte para cálculos com números complexos
 
 ## Pré-requisitos
