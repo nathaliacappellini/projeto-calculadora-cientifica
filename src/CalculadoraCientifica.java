@@ -1,7 +1,8 @@
 import java.util.Scanner;
+import operacoes.OperacoesBasicas;
+import operacoes.FuncoesTrigonometricas;
 
 /*To Do: 
-- Módulo
 - Algumas Funções Trigonométricas
 - Logaritmos e Funções Exponenciais
 - Fatorial e Combinações
@@ -9,58 +10,14 @@ import java.util.Scanner;
 - Funções Estatísticas
 */
 
-//Classe Calculadora para definir métodos
-class Operacoes {
-    public double somar(double a, double b) { // Somar dois números
-        return a + b;
-    }
-
-    public double subtrair(double a, double b) { // Subtrair dois números
-        return a - b;
-    }
-
-    public double multiplicar(double a, double b) { // Multiplicar dois números
-        return a * b;
-    }
-
-    public double dividir(double a, double b) { // Dividir dois números
-        if (b == 0) {
-            throw new IllegalArgumentException("Divisão por zero não é permitida.");
-        }
-        return (double) a / b;
-    }
-
-    public double raiz(double a) { // Calcular a raiz quadrada de um número
-        if (a < 0) {
-            throw new IllegalArgumentException("Não é possível calcular a raiz quadrada de número negtivo.");
-        }
-        return Math.sqrt(a);
-    }
-
-    public double potencia(double base, double expoente) { // Calcular um número elevado a outro
-        return Math.pow(base, expoente);
-    }
-
-    public double sen(double angulo) { // Calcular Seno
-        return Math.sin(Math.toRadians(angulo));
-    }
-
-    public double cos(double angulo) { // Calcular Cosseno
-        return Math.cos(Math.toRadians(angulo));
-    }
-
-    public double tan(double angulo) { // Calcular Tangente
-        return Math.tan(Math.toRadians(angulo));
-    }
-}
-
 // Classe Main para executar
 public class CalculadoraCientifica {
     public static void main(String[] args) {
         // Instâncias
-        Operacoes Operacoes = new Operacoes();
-        Scanner scanner = new Scanner(System.in);
+        OperacoesBasicas operacoes = new OperacoesBasicas();
+        FuncoesTrigonometricas funcoesTrig = new FuncoesTrigonometricas();
         CalculadoraCientifica main = new CalculadoraCientifica();
+        Scanner scanner = new Scanner(System.in);
 
         int escolha;
 
@@ -74,7 +31,7 @@ public class CalculadoraCientifica {
                     System.out.print("Digite o segundo número: ");
                     double num2 = lerNumero(scanner);
                     System.out.println(" ");
-                    System.out.println("Resultado da Adição: " + Operacoes.somar(num1, num2));
+                    System.out.println("Resultado da Adição: " + operacoes.somar(num1, num2));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -82,7 +39,7 @@ public class CalculadoraCientifica {
                     String resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
@@ -92,7 +49,7 @@ public class CalculadoraCientifica {
                     System.out.print("Digite o segundo número: ");
                     num2 = lerNumero(scanner);
                     System.out.println(" ");
-                    System.out.println("Resultado da Subtração: " + Operacoes.subtrair(num1, num2));
+                    System.out.println("Resultado da Subtração: " + operacoes.subtrair(num1, num2));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -100,7 +57,7 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
@@ -110,7 +67,7 @@ public class CalculadoraCientifica {
                     System.out.print("Digite o segundo número: ");
                     num2 = lerNumero(scanner);
                     System.out.println(" ");
-                    System.out.println("Resultado da Multiplicação: " + Operacoes.multiplicar(num1, num2));
+                    System.out.println("Resultado da Multiplicação: " + operacoes.multiplicar(num1, num2));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -118,7 +75,7 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
@@ -129,7 +86,7 @@ public class CalculadoraCientifica {
                     num2 = lerNumero(scanner);
                     try {
                         System.out.println(" ");
-                        System.out.println("Resultado da Divisão: " + Operacoes.dividir(num1, num2));
+                        System.out.println("Resultado da Divisão: " + operacoes.dividir(num1, num2));
                         System.out.println(" ");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
@@ -140,7 +97,7 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
@@ -149,7 +106,7 @@ public class CalculadoraCientifica {
                     double valor = lerNumero(scanner);
                     try {
                         System.out.println(" ");
-                        System.out.println("Resultado da Raiz Quadrada: " + Operacoes.raiz(valor));
+                        System.out.println("Resultado da Raiz Quadrada: " + operacoes.raiz(valor));
                         System.out.println(" ");
                     } catch (IllegalArgumentException e) {
                         System.out.println(e.getMessage());
@@ -160,7 +117,7 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
@@ -170,7 +127,7 @@ public class CalculadoraCientifica {
                     System.out.print("Digite o expoente: ");
                     double expoente = lerNumero(scanner);
                     System.out.println(" ");
-                    System.out.println("Resultado da Potência: " + Operacoes.potencia(base, expoente));
+                    System.out.println("Resultado da Potência: " + operacoes.potencia(base, expoente));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -178,16 +135,34 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
-                case 7: // Seno
+                case 7: // Módulo
+                    System.out.print("Digite o primeiro número: ");
+                    num1 = lerNumero(scanner);
+                    System.out.print("Digite o segundo número: ");
+                    num2 = lerNumero(scanner);
+                    System.out.println(" ");
+                    System.out.println("Resultado do Módulo: " + operacoes.modulo(num1, num2));
+                    System.out.println(" ");
+
+                    // Confirmando se o usuário deseja continuar
+                    System.out.println("Deseja continuar? Sim ou Não:");
+                    resposta = scanner.next();
+                    if (resposta.equalsIgnoreCase("Sim")) {
+                    } else {
+                        escolha = 11;
+                    } // Sair do loop
+                    break;
+
+                case 8: // Seno
                     System.out.print("Digite o ângulo em graus: ");
                     double anguloSeno = lerNumero(scanner);
                     System.out.println(" ");
                     System.out.println(
-                            "O resultado é aproximadamente: " + String.format("%.2f", Operacoes.sen(anguloSeno)));
+                            "O resultado é aproximadamente: " + String.format("%.2f", funcoesTrig.sen(anguloSeno)));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -195,16 +170,16 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
-                case 8: // Cosseno
+                case 9: // Cosseno
                     System.out.print("Digite o ângulo em graus: ");
                     double anguloCosseno = lerNumero(scanner);
                     System.out.println(" ");
                     System.out.println(
-                            "O resultado é aproximadamente: " + String.format("%.2f", Operacoes.cos(anguloCosseno)));
+                            "O resultado é aproximadamente: " + String.format("%.2f", funcoesTrig.cos(anguloCosseno)));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -212,16 +187,16 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
-                case 9: // Tangente
+                case 10: // Tangente
                     System.out.println("Digite o ângulo em graus: ");
                     double anguloTangente = lerNumero(scanner);
                     System.out.println(" ");
                     System.out.println(
-                            "O resultado é aproximadamente: " + String.format("%.2f", Operacoes.tan(anguloTangente)));
+                            "O resultado é aproximadamente: " + String.format("%.2f", funcoesTrig.tan(anguloTangente)));
                     System.out.println(" ");
 
                     // Confirmando se o usuário deseja continuar
@@ -229,11 +204,11 @@ public class CalculadoraCientifica {
                     resposta = scanner.next();
                     if (resposta.equalsIgnoreCase("Sim")) {
                     } else {
-                        escolha = 10;
+                        escolha = 11;
                     } // Sair do loop
                     break;
 
-                case 10: // Sair
+                case 11: // Sair
                     System.out.println("Saindo da calculadora...");
                     break;
 
@@ -241,7 +216,7 @@ public class CalculadoraCientifica {
                     System.out.println("Digite uma opção válida!");
                     break;
             }
-        } while (escolha != 10);
+        } while (escolha != 11);
 
         scanner.close();
     }
@@ -263,10 +238,11 @@ public class CalculadoraCientifica {
         System.out.println("4. Divisão");
         System.out.println("5. Raiz Quadrada");
         System.out.println("6. Potência");
-        System.out.println("7. Seno");
-        System.out.println("8. Cosseno");
-        System.out.println("9. Tangente");
-        System.out.println("10. Sair");
+        System.out.println("7. Módulo");
+        System.out.println("8. Seno");
+        System.out.println("9. Cosseno");
+        System.out.println("10. Tangente");
+        System.out.println("11. Sair");
         System.out.println("--------------------------");
         System.out.println("Escolha uma operação: ");
     }
