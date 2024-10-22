@@ -24,8 +24,7 @@ Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalid
 
 ## Funcionalidades Futuras (To Do)
 
-- Módulo
-- Algumas Funções Trigonométricas
+- Mais Funções Trigonométricas
 - Logaritmos e Funções Exponenciais
 - Fatorial e Combinações
 - Suporte para cálculos com números complexos
