@@ -1,8 +1,6 @@
-# Calculadora Científica
+# 🧮 Calculadora Científica
 
 Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalidades básicas e avançadas para a realização de operações matemáticas. O projeto visa servir como uma base para futuros aprimoramentos e adição de mais funcionalidades.
-
-## Índice
 
 ## Índice
 
