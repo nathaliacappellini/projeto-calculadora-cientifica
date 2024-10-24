@@ -1,6 +1,7 @@
+package pct_App;
 import java.util.Scanner;
-import operacoes.OperacoesBasicas;
-import operacoes.FuncoesTrigonometricas;
+import pct_Operacoes.FuncoesTrigonometricas;
+import pct_Operacoes.OperacoesBasicas;
 
 /*To Do: 
 - Algumas Funções Trigonométricas

@@ -1,4 +1,4 @@
-package operacoes;
+package pct_Operacoes;
 
 // Classe para definir métodos de funções trigonométricas
 public class FuncoesTrigonometricas {

@@ -1,4 +1,4 @@
-package operacoes;
+package pct_Operacoes;
 
 //Classe para definir métodos com as operações básicas
 public class OperacoesBasicas {
