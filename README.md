@@ -68,10 +68,6 @@ Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalid
 - Selecione uma operação, insira os números conforme solicitado, e o resultado será exibido no terminal.
 - Ao final de cada operação, será perguntado se você deseja continuar ou sair do programa.
 
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
-
 ---
 
 <div align="center">
