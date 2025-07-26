@@ -70,8 +70,9 @@ Meu projeto de **calculadora científica** desenvolvido em Java, com funcionalid
 
 ---
 
-<div align="center">
-Se tiver alguma dúvida, sinta-se à vontade para abrir uma issue.
 
-Feito com 💗 por <a href="https://github.com/nathaliacappellini">Nathi</a>.
+<div align="center">
+  <sub>Feito com 🩷 por</sub><br>
+  <strong><a href="https://github.com/nathaliacappellini" target="_blank">Nathalia Cappellini</a></strong><br>
 </div>
+
